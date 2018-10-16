@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  min-height: 100vh;
+}
+
+body,
+.react-root,
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h1 {
+  letter-spacing: -1px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #333;
+  text-decoration-color: #ddd;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+header {
+  background: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  padding: 1em;
+}
+
+input {
+  padding: 1em;
+  border: none;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 80, 0.2);
+  margin-right: 1em;
+}
+
+button {
+  padding: .5em 1em;
+  border: 1px solid #aad;
+  font-weight: 600;
+  font-size: 1em;
+  color: #333;
+  background-color: #fbfbfb;
+  border-radius: .5em;
+  box-shadow: 1px 1px 5px rgba(0, 0, 80, 0.1);
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Using semantic HTML elements because this application is
+   so simple it doesn't need class names */
+section {
+  display: grid;
+  width: 90vw;
+  margin: 1em auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-auto-flow: row;
+}
+
+.blogTitle {
+  grid-column: span 2;
+}
+
+article {
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+article.is-expanded {
+  grid-column: span 2;
+}
+
+article img {
+  width: auto !important; /* Overrides inline width set from rss */
+}
+
+footer {
+  font-size: .75em;
+  color: #555;
+}
+
+.expander {
+  font-size: .75em;
+  margin-bottom: 1em;
+}
+
+.error {
+  padding: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .blogTitle {
+    grid-column: span 1;
+  }
+
+  article.is-expanded {
+    grid-column: span 1;
+  }
+}
+
+/* Custom pulse animation for loading state */
+.loading {
+  flex-grow: 1;
+  display: flex;
+  margin: auto auto;
+}
+
+.loading > div {
+  animation: pulse .6s infinite ease-in-out;
+  margin: auto 10px;
+  height: 50px;
+}
+
+.loading > div:nth-child(2n) {
+  animation-delay: -.1s;
+}
+
+.loading > div:first-child {
+  animation-delay: -.2s;
+}
+
+.loading div:after {
+  display: block;
+  content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50' width='20'><rect x='0' y='0' width='20' height='50' fill='lightblue' /></svg>");
+  background-size: 50px 20px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    transform: scaleY(1.0);
+  }
+
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
