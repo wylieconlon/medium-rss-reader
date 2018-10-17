@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `"<div class=\\"app\\"><header><label>medium.com/<input type=\\"text\\" value=\\"the-atlantic\\"/></label><button>Load Feed</button></header></div>"`;

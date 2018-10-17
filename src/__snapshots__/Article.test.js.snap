@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a more full article 1`] = `"<article class=\\"\\"><h2><a href=\\"http://medium.com\\">Fake Article</a></h2><p>By Wylie Conlon</p><p><p>Some articles have a preview here</p></p><button class=\\"expander\\">Expand article</button><footer>Published <time dateTime=\\"10/17/18\\">10/17/18</time>  • Updated at <time dateTime=\\"10/17/18\\">10/17/18</time></footer></article>"`;
+
+exports[`renders without crashing 1`] = `null`;

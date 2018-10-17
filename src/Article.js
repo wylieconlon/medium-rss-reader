@@ -5,6 +5,10 @@ class Article extends Component {
     const article = this.props.article;
     const isExpanded = this.props.isExpanded;
 
+    if (!article) {
+      return;
+    }
+
     return (<article className={`${isExpanded ? 'is-expanded' : ''}`}>
       <h2><a href={article.link}>{article.title}</a></h2>
       <p>By {article.creator}</p>
