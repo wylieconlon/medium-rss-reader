@@ -32,7 +32,7 @@
     "regenerator-runtime": "^0.12.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.12"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
